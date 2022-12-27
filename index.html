@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+    <header class="header" id="home">
+        <div class="header-fix__container">
+         
+            <div class="header__container">
+                <div class="header__burger">
+                    <span></span>
+                </div>
+                <div class="header__logo">
+                    <a href="#home">
+                        <img src="img/header/header-logo.png" alt="logo">
+                    </a>
+                </div>
+                <div class="header-menu">
+                    <nav class="header-menu__list">
+                        <ul class="menu-list">
+                            <li class="list-item">
+                                <a href="#home" class="header-link">
+                                    Home
+                                </a>
+                            </li>
+                            <li class="list-item">
+                                <a href="#order" class="header-link">
+                                    Order
+                                </a>
+                            </li>
+                            <li class="list-item">
+                                <a href="#about" class="header-link">
+                                    Company
+                                </a>
+                            </li>
+                            <li class="list-item">
+                                <a href="#faq" class="header-link">
+                                    FAQ
+                                </a>
+                            </li>
+                            <li class="list-item">
+                                <a href="#footer" class="header-link">
+                                    Contact
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="cart">
+                       <button class="header-btn" id="header-btn" onclick="clickCart()">
+                            <img src="/img/header/cart1.svg" alt="cart" class="cart-img">
+                            <p class="cart-count" id="itemCounter">0</p>
+                         
+                       </button>
+                       <div id="cart_content">
+                        <p id="orderTotal"></p>
+                        <p id="shippingTotal"></p>
+                       </div>
+                    </div>                     
+                </div>
+            </div>
+        </div>
+        
+    </header>
+    <main class="main">
+        <section class="order" id="order">
+            <div class="order__container description">
+                <div class="main-order__text item-style">
+                    <h1 class="main-order">
+                        Beautiful food & takeaway, <span class="main-order__span">delivered </span> to your door.
+                    </h1>
+                    <p class="order-text">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum unde veniam mollitia eaque perferendis 
+                        eveniet voluptate modi perspiciatis? Dolores neque architecto commodi ea voluptatibus aliquid accusamus velit sit ratione possimus.
+                    </p>
+                    <button class="order-btn main-btn">
+                        <a href="#" class="order-btn__link main-btn__link">Place an Order </a>
+                    </button>
+                </div>
+                <img src="img/order/main-order.png" alt="" class="order__img">
+            </div>
+        </section>
+        <section class="about" id="about">
+            <div class="about__container description">
+                <div class="main-about__text item-style">
+                    <h2 class="main-about">
+                        The home of <br> fresh products
+                    </h2>
+                    <p class="about-text main-txt">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum unde veniam mollitia eaque perferendis 
+                        eveniet voluptate modi perspiciatis? Dolores neque architecto commodi ea voluptatibus aliquid accusamus velit sit ratione possimus.
+                    </p>
+                    <button class="about-btn main-btn">
+                        <a href="#" class="about-btn__link main-btn__link">Learn about us</a>
+                    </button>
+                </div>
+                <img src="img/about/about-img.png" alt="" class="about__img">
+            </div>
+        </section>
+        <section class="how" id="how">
+            <div class="how__container">
+                <h2 class="how-h2">How it works.</h2>
+                <div class="how-items">
+                    <div class="how-item">
+                        <img src="/img/how/item1.png" alt="*" class="img-item">
+                        <p class="head-item">Adapt your menu items</p>
+                        <p class="text-item">Easily adapt your menu using the webflow CMS and allow customers to browse your items.</p>
+                    </div>
+                    <div class="how-item">
+                        <img src="/img/how/item2.png" alt="*" class="img-item">
+                        <p class="head-item">Accept online orders & takeout</p>
+                        <p class="text-item">Let your customers order and pay via the powerful ecommerce system, or simple let them call your store.</p>
+                    </div>
+                    <div class="how-item">
+                        <img src="/img/how/item3.png" alt="*" class="img-item">
+                        <p class="head-item">Manage delivery or takeout</p>
+                        <p class="text-item">Manage your own logistics and take orders simply through the ecommerce system.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="order-menu" id="order-menu">
+            <div class="oreder-menu__container">
+                <div class="order-menu__main-title">
+                    <h2 class="main-order-menu">
+                        Browse our menu
+                    </h2>
+                    <p class="order-menu__description">
+                        Use our menu to place an order online, or phone our store <br> to place a pickup order. Fast and fresh food.
+                    </p>
+                </div>
+                <div class="content">
+                    <div class="tabs">
+                        <nav class="tabs-items">
+                            <a href="#burgers" class="tabs-item">
+                                <button class="tabs-btn main-btn">
+                                    Burgers
+                                </button>
+                            </a>
+                            <a href="#sides" class="tabs-item">
+                                <button class="tabs-btn main-btn">
+                                    Sides
+                                </button>
+                            </a>
+                            <a href="#drinks" class="tabs-item">
+                                <button class="tabs-btn main-btn">
+                                    Drinks
+                                </button>
+                            </a>
+                        </nav>
+                        <div class="tabs-block" id="burgers">
+                            <div class="block-item">
+                                <img src="img/order-menu/burgers/bur-1.png" alt="#" class="order-menu__img">
+                                <div class="menu-order__content">
+                                    <div class="order-menu__title">
+                                        <h3 class="order-menu__name">Burger Dreams</h3>
+                                        <span class="order-menu__price">$ 9.20 USD</span>
+                                    </div>
+                                    <p class="order-menu__text">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    </p>
+                                    <div class="order-menu__cart">
+                                        <p class="order-menu__count" id="order-menu__count">1</p>
+                                        <button class="order-menu__btn"  data-id="1" onclick="addToCart(burgers[0])">Add to Cart</button>
+                                    </div>    
+                                </div>
+                            </div>
+                            <div class="block-item">
+                                <img src="img/order-menu/burgers/bur-2.png" alt="#" class="order-menu__img">
+                                <div class="menu-order__content">
+                                    <div class="order-menu__title">
+                                        <h3 class="order-menu__name">Burger Waldo</h3>
+                                        <span class="order-menu__price">$ 10.00 USD</span>
+                                    </div>
+                                    <p class="order-menu__text">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    </p>
+                                    <div class="order-menu__cart">
+                                        <p class="order-menu__count" id="order-menu__count">1</p>
+                                        <button class="order-menu__btn" data-id="2" onclick="addToCart(burgers[1])">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="block-item">
+                                <img src="img/order-menu/burgers/bur-3.png" alt="#" class="order-menu__img">
+                                <div class="menu-order__content">
+
+                                    <div class="order-menu__title">
+                                        <h3 class="order-menu__name">Burger Cali</h3>
+                                        <span class="order-menu__price">$ 8.00 USD</span>
+                                    </div>
+                                    <p class="order-menu__text">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    </p>
+                                    <div class="order-menu__cart">
+                                        <p class="order-menu__count" id="order-menu__count">1</p>
+                                        <button class="order-menu__btn" data-id="3" onclick="addToCart(burgers[2])">Add to Cart</button>
+                                    </div>
+                                </div>
+                                
+
+                            </div>
+                            <div class="block-item">
+                                <img src="img/order-menu/burgers/bur-4.png" alt="#" class="order-menu__img">
+                                <div class="menu-order__content">
+                                    <div class="order-menu__title">
+                                        <h3 class="order-menu__name">Burger Bacon Buddy</h3>
+                                        <span class="order-menu__price">$ 9.99 USD</span>
+                                    </div>
+                                    <p class="order-menu__text">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    </p>
+                                    <div class="order-menu__cart">
+                                        <p class="order-menu__count" id="order-menu__count">1</p>
+                                        <button class="order-menu__btn" data-id="4" onclick="addToCart(burgers[3])">Add to Cart</button>
+                                    </div>
+
+                                </div>
+                                
+
+                            </div>
+                            <div class="block-item">
+                                <img src="img/order-menu/burgers/bur-5.png" alt="#" class="order-menu__img">
+                                <div class="menu-order__content">
+
+                                    <div class="order-menu__title">
+                                        <h3 class="order-menu__name">Burger Spicy</h3>
+                                        <span class="order-menu__price">$ 9.20 USD</span>
+                                    </div>
+                                    <p class="order-menu__text">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    </p>
+                                    <div class="order-menu__cart">
+                                        <p class="order-menu__count" id="order-menu__count">1</p>
+                                        <button class="order-menu__btn"  data-id="5" onclick="addToCart(burgers[4])">Add to Cart</button>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="block-item">
+                                <img src="img/order-menu/burgers/bur-6.png" alt="#" class="order-menu__img">
+                                <div class="menu-order__content">
+                                    <div class="order-menu__title">
+                                        <h3 class="order-menu__name">Burger Classic</h3>
+                                        <span class="order-menu__price">$ 8.00 USD</span>
+                                    </div>
+                                    <p class="order-menu__text">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    </p>
+                                    <div class="order-menu__cart">
+                                        <p class="order-menu__count" id="order-menu__count">1</p>
+                                        <button class="order-menu__btn" data-id="6" onclick="addToCart(burgers[5])">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                           
+                            
+                        </div>
+                        <div class="tabs-block" id="sides">
+                            <div class="block-item">
+                                <img src="img/about/about-img.png" alt="#" class="order-menu__img">
+                                <div class="menu-order__content">
+                                    <div class="order-menu__title">
+                                        <h3 class="order-menu__name">Not available</h3>
+                                        <span class="order-menu__price">$ 5.25 USD</span>
+                                    </div>
+                                    <p class="order-menu__text">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    </p>
+                                    <div class="order-menu__cart">
+                                        <p class="order-menu__count" id="order-menu__count">1</p>
+                                        <button class="order-menu__btn" id="add" data-id="">Add to Cart</button>
+                                    </div>    
+                                </div>
+                            </div>
+                            <div class="block-item">
+                                <img src="img/about/about-img.png" alt="#" class="order-menu__img">
+                                <div class="menu-order__content">
+                                    <div class="order-menu__title">
+                                        <h3 class="order-menu__name">Not available</h3>
+                                        <span class="order-menu__price">$ 5.25 USD</span>
+                                    </div>
+                                    <p class="order-menu__text">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    </p>
+                                    <div class="order-menu__cart">
+                                        <p class="order-menu__count" id="order-menu__count">1</p>
+                                        <button class="order-menu__btn" id="add" data-id="">Add to Cart</button>
+                                    </div>    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tabs-block" id="drinks">
+                            <div class="block-item">
+                                <img src="img/call/call-img.png" alt="#" class="order-menu__img">
+                                <div class="menu-order__content">
+                                    <div class="order-menu__title">
+                                        <h3 class="order-menu__name">Not available</h3>
+                                        <span class="order-menu__price">$ 1.20 USD</span>
+                                    </div>
+                                    <p class="order-menu__text">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    </p>
+                                    <div class="order-menu__cart">
+                                        <p class="order-menu__count" id="order-menu__count">1</p>
+                                        <button class="order-menu__btn" id="add" data-id="">Add to Cart</button>
+                                    </div>    
+                                </div>
+                            </div>
+                            <div class="block-item">
+                                <img src="img/call/call-img.png" alt="#" class="order-menu__img">
+                                <div class="menu-order__content">
+                                    <div class="order-menu__title">
+                                        <h3 class="order-menu__name">Not available</h3>
+                                        <span class="order-menu__price">$ 1.20 USD</span>
+                                    </div>
+                                    <p class="order-menu__text">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    </p>
+                                    <div class="order-menu__cart">
+                                        <p class="order-menu__count" id="order-menu__count">1</p>
+                                        <button class="order-menu__btn" id="add" data-id="">Add to Cart</button>
+                                    </div>    
+                                </div>
+                            </div>
+                            <div class="block-item">
+                                <img src="img/call/call-img.png" alt="#" class="order-menu__img">
+                                <div class="menu-order__content">
+                                    <div class="order-menu__title">
+                                        <h3 class="order-menu__name">Not available</h3>
+                                        <span class="order-menu__price">$ 1.20 USD</span>
+                                    </div>
+                                    <p class="order-menu__text">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    </p>
+                                    <div class="order-menu__cart">
+                                        <p class="order-menu__count" id="order-menu__count">1</p>
+                                        <button class="order-menu__btn" id="add" data-id="">Add to Cart</button>
+                                    </div>    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="faq" id="faq">
+            <div class="faq__container description">
+                <img src="img/faq/faq-img.png" alt="#" class="faq__img">
+                <div class="faq-info item-style">
+                    <h2 class="main-faq">Order online with our simple checkout. </h2>
+                    <p class="faq-text main-txt">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam alias odio, magni eum officiis aliquid velit. Expedita excepturi perspiciatis voluptates laudantium doloremque ex consequatur velit ipsa, esse veniam minus unde.</p>
+                    <button class="faq-btn main-btn">
+                        <a href="#" class="faq-btn__link main-btn__link">See our FAQ</a>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section class="call" id="call">
+            <div class="call__container description">
+                <div class="call-info item-style">
+                    <h2 class="main-call">Call our store and takeaway when it suits you best.</h2>
+                    <p class="call-text main-txt">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque, minima provident sunt perferendis voluptate ipsam odio nemo dolorum ut. Minus dolores ea provident veniam, voluptatum sequi libero hic ipsam perferendis!</p>
+                    <button class="call-btn main-btn">
+                        <a href="tel:+61 233 2333" class="call-btn__link main-btn__link">Ph. +61 233 2333</a>
+                    </button>
+                </div>
+                <img src="img/call/call-img.png" alt="#" class="call__img">
+            </div>
+        </section>
+        <section class="support" id="support">
+            <div class="support__container description">
+                <img src="img/support/support-img.png" alt="" class="support__img">
+                <div class="support-info item-style">
+                    <h2 class="main-support"><span class="support-h2">Support</span> good food and local business.</h2>
+                    <button class="support-btn">
+                        Order Now
+                    </button>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <footer class="footer" id="footer">
+    <div class="footer__container">
+     <div class="footer-top">
+            <div class="footer-left">
+                <img src="img/footer/footer-logo.png" alt="logo" class="footer__img">
+                <p class="footer-info">
+                    Takeaway & Delivery template <br> for small - medium businesses.
+                </p>    
+            </div>
+        
+        
+            <div class="footer-col">
+                <h3>company</h3>
+                <a href="#home" class="footer-item">Home</a>
+                <a href="#order" class="footer-item">Order</a>
+                <a href="#faq" class="footer-item">FAQ</a>
+                <a href="#call" class="footer-item">Contact</a>
+            </div>
+            <div class="footer-col">
+                <h3>TEMPLATE</h3>
+                <a href="#" class="footer-item">Style Guide</a>
+                <a href="#" class="footer-item">Changelog</a>
+                <a href="#" class="footer-item">Licence</a>
+                <a href="#" class="footer-item">Webflow University</a>
+            </div>
+            <div class="footer-col">
+                <h3>FLOWBASE</h3>
+                <a href="#" class="footer-item">More Cloneables</a>
+            </div>
+       
+     </div>
+        <div class="footer-down" >
+            <div class="footer__copyright">
+               <p class="footer-p">Contact <span class="footer-span">Flowbase</span> Powered by <span class="footer-span">Webflow</span></p> 
+            </div>
+            <div class="footer-social">
+                <a href="http://www.instagram.com/">
+                 <img src="img/footer/ins-link.png" alt="#" class="footer-link">
+                </a>
+                <a href="http://twitter.com">
+                    <img src="img/footer/twitter-link.png" alt="#" class="footer-link">
+                </a>
+                <a href="http://youtube.com">
+                    <img src="img/footer/youtube-link.png" alt="#" class="footer-link">
+                </a>
+            </div>
+        </div>
+    </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="/burger.js"></script>
+    <script src="/cart.js"></script>
+
+   
+</body>
+</html>
